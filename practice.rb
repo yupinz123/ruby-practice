@@ -17,3 +17,6 @@ end
 
 p 7.0.class
 p (7.0 / 2).class
+
+ p Integer("7")
+ p Integer("abc") 
