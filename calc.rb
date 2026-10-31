@@ -1,3 +1,4 @@
+loop do
 begin
   print "最初の数字を入力してください: "
   a = Integer(gets)
@@ -21,3 +22,7 @@ begin
 rescue ArgumentError => e
   puts "エラーが発生しました: #{e.message}"
 end
+  print "終了するには 'q' を入力してください: "
+  break if gets.to_s.chomp.downcase == "q"
+end
+puts "終了します"
