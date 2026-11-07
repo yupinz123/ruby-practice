@@ -3,7 +3,7 @@ tasks = [{ title: "牛乳を買う", done: false }, { title: "レポートを書
 
 loop do
     begin
-        puts "1: 一覧  2: 追加  q: 終了:"
+        print "1: 一覧  2: 追加  q: 終了:"
         input = gets.chomp
         break if input == "q"
         if input == "1"
@@ -16,10 +16,11 @@ loop do
           tasks << { title: title, done: false }
           puts "タスクを追加しました。"
         else
-          puts "無効な入力です。"
+          puts "無効な入力です"
         end
     puts "終了します。" if input == "q"
     rescue => e
       puts "エラーが発生しました: #{e.message}"
     end
 end
+puts "終了します"
